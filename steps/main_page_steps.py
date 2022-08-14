@@ -33,6 +33,10 @@ class MainPageSteps(BaseSteps):
         assert self.main_page.docs_nav.text == 'Docs', 'Text is not correct'
         self.main_page.docs_nav.click()
 
+    def docs_nav_bottom(self):
+        assert self.main_page.docs_nav_bottom.text == 'Documentation', 'Text is not correct'
+        self.main_page.docs_nav_bottom.click()
+
 
 
 

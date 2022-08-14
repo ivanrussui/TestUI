@@ -17,3 +17,11 @@ class DocsPageSteps(BaseSteps):
         assert self.docs_page.docs_tutorial.text == 'Tutorial', 'Text is not correct'
         self.docs_page.docs_tutorial.click()
         pass
+
+    def docs_search(self, search_text):
+        assert self.docs_page.docs_input_search.is_displayed(), "Поле Search не на экране"
+        self.docs_page.docs_input_search.clear()
+        self.docs_page.docs_input_search.send_keys(search_text)
+        assert self.docs_page.docs_input_search.get_property('value') == search_text, "Описание ошибки"
+        self.docs_page.docs_search_go.click()
+

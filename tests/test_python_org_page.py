@@ -27,4 +27,11 @@ def test_docs_nav():
     steps.docs_page(driver).check_tutorial()
     steps.tutorial_page(driver).check_tutorial_page_is_open()
 
-# def
+
+def test_docs_search_input():
+    driver = steps.driver_steps().create_driver_and_open_python_page()
+    steps.main_page(driver).docs_nav_bottom()
+    steps.doc_page(driver).docs_page_open()
+    steps.docs_page(driver).docs_search(search_text="Python/C API")
+    steps.main_page(driver).check_search_result(search_text="Python/C API")
+    pass
