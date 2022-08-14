@@ -35,3 +35,10 @@ def test_docs_search_input():
     steps.docs_page(driver).docs_search(search_text="Python/C API")
     steps.main_page(driver).check_search_result(search_text="Python/C API")
     pass
+
+
+def test_community_nav():
+    driver = steps.driver_steps().create_driver_and_open_python_page()
+    steps.main_page(driver).community_landing_open()
+    steps.community_landing_page(driver).check_community_landing_page_is_open()
+    pass

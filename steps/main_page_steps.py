@@ -37,6 +37,8 @@ class MainPageSteps(BaseSteps):
         assert self.main_page.docs_nav_bottom.text == 'Documentation', 'Text is not correct'
         self.main_page.docs_nav_bottom.click()
 
-
+    def community_landing_open(self):
+        assert self.main_page.community_nav.text == 'Community', 'Text is not correct'
+        self.main_page.community_nav.click()
 
 

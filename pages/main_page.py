@@ -34,3 +34,7 @@ class MainPage(BasePage):
     @property
     def docs_nav_bottom(self) -> WebElement:
         return self.driver.find_element(By.XPATH, '//li[@id="documentation"]/a[@href="/doc/"]' or '//*[@id="documentation"]/a')
+
+    @property
+    def community_nav(self) -> WebElement:
+        return self.driver.find_element(By.XPATH, '//a[@href="/community-landing/"]')

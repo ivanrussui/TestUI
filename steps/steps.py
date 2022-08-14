@@ -1,3 +1,4 @@
+from steps.community_landing_page_steps import CommunityLandingPageSteps
 from steps.doc_page_steps import DocPageSteps
 from steps.docs_page_steps import DocsPageSteps
 from steps.donate_page_steps import DonatePageSteps
@@ -34,6 +35,10 @@ def tutorial_page(driver) -> TutorialPageSteps:
 
 def doc_page(driver) -> DocPageSteps:
     return DocPageSteps(driver)
+
+
+def community_landing_page(driver) -> CommunityLandingPageSteps:
+    return CommunityLandingPageSteps(driver=driver)
 
 
 def driver_steps() -> DriverSteps:
