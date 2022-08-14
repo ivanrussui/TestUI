@@ -3,6 +3,7 @@ from steps.base_steps import BaseSteps
 
 
 class DonatePageSteps(BaseSteps):
+
     @property
     def donate_page(self) -> DonatePage:
         return DonatePage(self.driver)

@@ -29,5 +29,10 @@ class MainPageSteps(BaseSteps):
         assert self.main_page.psf_nav.text == 'PSF', 'Text is not correct'
         self.main_page.psf_nav.click()
 
+    def docs_open(self):
+        assert self.main_page.docs_nav.text == 'Docs', 'Text is not correct'
+        self.main_page.docs_nav.click()
+
+
 
 

@@ -26,3 +26,7 @@ class MainPage(BasePage):
     @property
     def psf_nav(self) -> WebElement:
         return self.driver.find_element(By.XPATH, '//a[@title="The Python Software Foundation"]')
+
+    @property
+    def docs_nav(self) -> WebElement:
+        return self.driver.find_element(By.XPATH, '//a[@title="Python Documentation"]')

@@ -39,6 +39,7 @@ class MainPage:
     def about_title(self) -> WebElement:
         return self.driver.find_element(By.XPATH, '//h1[@class="page-title"]')
 
+    # 2 test
     @property
     def docs_nav(self) -> WebElement:
         return self.driver.find_element(By.XPATH, '//a[@title="Python Documentation"]')
@@ -55,6 +56,7 @@ class MainPage:
     def docs_tutorial_title(self) -> WebElement:
         return self.driver.find_element(By.XPATH, '//h1')
 
+    # ost
     @property
     def docs_nav_bottom(self) -> WebElement:
         return self.driver.find_element(By.XPATH, '//li[@id="documentation"]/a[@href="/doc/"]' or '//*[@id="documentation"]/a')
@@ -121,6 +123,7 @@ def test_dosc_nav():
     assert main_page.docs_tutorial.is_displayed(), 'No text'
     assert main_page.docs_tutorial.text == 'Tutorial', 'Text is not correct'
     main_page.docs_tutorial.click()
+    # ost
     assert main_page.docs_tutorial_title.is_displayed(), 'No text'
     assert main_page.docs_tutorial_title.text == 'The Python Tutorial', 'Text is not correct'
     pass

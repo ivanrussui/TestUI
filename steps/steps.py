@@ -1,8 +1,10 @@
+from steps.docs_page_steps import DocsPageSteps
 from steps.donate_page_steps import DonatePageSteps
 from steps.driver_steps import DriverSteps
 from steps.main_page_steps import MainPageSteps
 from steps.psf_about_page_steps import PsfAboutPageSteps
 from steps.psf_landing_page_steps import PsfLandingPageSteps
+from steps.tutorial_page_steps import TutorialPageSteps
 
 
 def main_page(driver) -> MainPageSteps:
@@ -19,6 +21,14 @@ def psf_landing_page(driver) -> PsfLandingPageSteps:
 
 def psf_about_page(driver) -> PsfAboutPageSteps:
     return PsfAboutPageSteps(driver=driver)
+
+
+def docs_page(driver) -> DocsPageSteps:
+    return DocsPageSteps(driver=driver)
+
+
+def tutorial_page(driver) -> TutorialPageSteps:
+    return TutorialPageSteps(driver=driver)
 
 
 def driver_steps() -> DriverSteps:
