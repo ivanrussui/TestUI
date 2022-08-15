@@ -4,9 +4,11 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
+from src.steps import Steps
+
 
 @pytest.fixture
-def steps() -> None:
+def steps() -> Steps:
 
     driver = webdriver.Chrome(
         service=Service(ChromeDriverManager(
@@ -17,7 +19,9 @@ def steps() -> None:
 
     driver.get("https://www.python.org/")
 
-    yield
+    steps_obj = Steps(driver)
+
+    yield steps_obj
 
     driver.quit()
 

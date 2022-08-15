@@ -1,1 +1,2 @@
-from src.steps.steps import *
+from src.steps.steps import Steps
+
