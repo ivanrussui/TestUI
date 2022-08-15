@@ -1,5 +1,5 @@
-from pages.psf_about_page import PsfAboutPage
-from steps.base_steps import BaseSteps
+from src.pages.psf.psf_about_page import PsfAboutPage
+from src.steps.base_steps import BaseSteps
 
 
 class PsfAboutPageSteps(BaseSteps):

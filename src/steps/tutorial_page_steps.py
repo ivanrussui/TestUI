@@ -1,6 +1,5 @@
-from pages.docs_page import DocsPage
-from pages.tutorial_page import TutorialPage
-from steps.base_steps import BaseSteps
+from src.pages.tutorial_page import TutorialPage
+from src.steps.base_steps import BaseSteps
 
 
 class TutorialPageSteps(BaseSteps):

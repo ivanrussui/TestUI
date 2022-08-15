@@ -1,5 +1,5 @@
-from pages.docs_page import DocsPage
-from steps.base_steps import BaseSteps
+from src.pages.docs_page import DocsPage
+from src.steps.base_steps import BaseSteps
 
 
 class DocsPageSteps(BaseSteps):

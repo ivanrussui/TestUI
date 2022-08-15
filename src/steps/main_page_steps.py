@@ -1,5 +1,5 @@
-from pages.main_page import MainPage
-from steps.base_steps import BaseSteps
+from src.pages.main_page import MainPage
+from src.steps.base_steps import BaseSteps
 
 
 class MainPageSteps(BaseSteps):

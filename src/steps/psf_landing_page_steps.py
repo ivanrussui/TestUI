@@ -1,5 +1,5 @@
-from pages.psf_landing_page import PsfLandingPage
-from steps.base_steps import BaseSteps
+from src.pages.psf.psf_landing_page import PsfLandingPage
+from src.steps.base_steps import BaseSteps
 
 
 class PsfLandingPageSteps(BaseSteps):

@@ -1,5 +1,5 @@
-from pages.community_landing_page import CommunityLandingPage
-from steps.base_steps import BaseSteps
+from src.pages.community_landing_page import CommunityLandingPage
+from src.steps.base_steps import BaseSteps
 
 
 class CommunityLandingPageSteps(BaseSteps):

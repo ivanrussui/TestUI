@@ -1,5 +1,5 @@
-from pages.donate_page import DonatePage
-from steps.base_steps import BaseSteps
+from src.pages.donate_page import DonatePage
+from src.steps.base_steps import BaseSteps
 
 
 class DonatePageSteps(BaseSteps):

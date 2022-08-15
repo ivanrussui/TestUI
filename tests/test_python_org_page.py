@@ -1,4 +1,4 @@
-import steps
+from src import steps
 
 
 def test_donation_button():
@@ -8,9 +8,10 @@ def test_donation_button():
 
 
 def test_search_input():
+    search_text = 'hello'
     driver = steps.driver_steps().create_driver_and_open_python_page()
-    steps.main_page(driver).search(search_text="hello")
-    steps.main_page(driver).check_search_result(search_text="hello")
+    steps.main_page(driver).search(search_text=search_text)
+    steps.main_page(driver).check_search_result(search_text)  # можно так search_text
 
 
 def test_psf_nav():
@@ -29,16 +30,15 @@ def test_docs_nav():
 
 
 def test_docs_search_input():
+    search_text = "Python/C API"
     driver = steps.driver_steps().create_driver_and_open_python_page()
     steps.main_page(driver).docs_nav_bottom()
     steps.doc_page(driver).docs_page_open()
-    steps.docs_page(driver).docs_search(search_text="Python/C API")
-    steps.main_page(driver).check_search_result(search_text="Python/C API")
-    pass
+    steps.docs_page(driver).docs_search(search_text)
+    steps.main_page(driver).check_search_result(search_text)
 
 
 def test_community_nav():
     driver = steps.driver_steps().create_driver_and_open_python_page()
     steps.main_page(driver).community_landing_open()
     steps.community_landing_page(driver).check_community_landing_page_is_open()
-    pass
