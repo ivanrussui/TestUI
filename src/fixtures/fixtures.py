@@ -9,11 +9,15 @@ from src.steps import Steps
 
 @pytest.fixture
 def steps() -> Steps:
+    options = webdriver.ChromeOptions()
+    options.add_argument("--start-maximized")
+    options.add_experimental_option("excludeSwitches", ["enable-automation"])
+    options.add_experimental_option('useAutomationExtension', False)
+    options.add_argument('headless')  # мож закоментить а то один тест фейлется
+
     driver = webdriver.Chrome(
-        service=Service(ChromeDriverManager(
-            path="/IT/koleso/autotests/TestUI/"
-        ).install()),
-        # options=None,
+        service=Service(ChromeDriverManager().install()),
+        options=options,
     )
 
     driver.get("http://www.python.org")
