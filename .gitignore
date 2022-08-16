@@ -1,4 +1,7 @@
 .idea
 tests/.pytest_cache
 .venv
+.wdm
+lib
+.pytest_cache
 main.py
