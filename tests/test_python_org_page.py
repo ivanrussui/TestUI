@@ -1,5 +1,8 @@
+# noinspection PyUnresolvedReferences
+import pytest
 
-from src import steps
+# noinspection PyUnresolvedReferences
+from src.fixtures import steps
 
 
 def test_donation_button(steps):

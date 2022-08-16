@@ -9,15 +9,14 @@ from src.steps import Steps
 
 @pytest.fixture
 def steps() -> Steps:
-
     driver = webdriver.Chrome(
         service=Service(ChromeDriverManager(
-            path="/IT/koleso/autotests/TestUI"
+            path="C:/IT/koleso/autotests/TestUI/"
         ).install()),
         # options=None,
     )
 
-    driver.get("https://www.python.org/")
+    driver.get("http://www.python.org")
 
     steps_obj = Steps(driver)
 
