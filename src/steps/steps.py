@@ -10,7 +10,7 @@ from src.steps.tutorial_page_steps import TutorialPageSteps
 
 class Steps:
 
-    def __int__(self, driver):
+    def __init__(self, driver):
         self.driver = driver
 
     @property

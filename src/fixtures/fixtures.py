@@ -11,7 +11,7 @@ from src.steps import Steps
 def steps() -> Steps:
     driver = webdriver.Chrome(
         service=Service(ChromeDriverManager(
-            path="C:/IT/koleso/autotests/TestUI/"
+            path="/IT/koleso/autotests/TestUI/"
         ).install()),
         # options=None,
     )
