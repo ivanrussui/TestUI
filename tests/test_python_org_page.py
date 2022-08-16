@@ -10,8 +10,8 @@ def test_donation_button(steps):
     steps.donate_page.check_donate_page_is_open()
 
 
-def test_search_input(steps):
-    search_text = 'hello'
+@pytest.mark.parametrize("search_text", ["hello", "world", "!"])
+def test_search_input(steps, search_text):
     steps.main_page.search(search_text=search_text)
     steps.main_page.check_search_result(search_text)  # можно так search_text
 
