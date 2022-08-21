@@ -1,4 +1,4 @@
 # TestUI python
 
 ## Запуск тестов
-pytest -n 3 -v ./tests
+`pytest -n 3 -v ./tests`
